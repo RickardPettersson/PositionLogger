@@ -11,6 +11,9 @@ import android.util.Log;
 import android.view.View;
 
 public class PositionLogger extends Activity {
+	
+	private final static String TAG = PositionLogger.class.getSimpleName();
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,7 +26,7 @@ public class PositionLogger extends Activity {
     }
 
 	public void startListening(View v) {
-		Log.w(getClass().getName(), "Start listening click");
+		Log.i(TAG, "Start listening click");
 		
 		Intent i = new Intent(this, PositionService.class);
 
@@ -34,7 +37,7 @@ public class PositionLogger extends Activity {
 	}
 
 	public void stopListening(View v) {
-		Log.w(getClass().getName(), "Stop listening click");
+		Log.i(TAG, "Stop listening click");
 		stopService(new Intent(this, PositionService.class));
 	}
       

@@ -12,7 +12,8 @@ public class PositionService extends Service {
 	
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-
+		start();
+		
 		// START_NOT_STICKY = The service being closed if Android has to kill
 		// off this service (e.g., low memory), it should not restart it once
 		// conditions improve.

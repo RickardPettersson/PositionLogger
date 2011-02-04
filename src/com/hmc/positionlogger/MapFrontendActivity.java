@@ -1,6 +1,8 @@
 package com.hmc.positionlogger;
 
 import com.google.android.maps.MapActivity;
+import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.IntentAction;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +15,9 @@ public class MapFrontendActivity extends MapActivity {
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.mapfrontend);
+		
+        ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
+        actionBar.setHomeAction(new IntentAction(this, PositionLogger.createIntent(this), R.drawable.home));
 	}
 	
     public static Intent createIntent(Context context) {

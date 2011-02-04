@@ -22,7 +22,7 @@ public class PositionLogger extends Activity {
 
         ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
         actionBar.setHomeAction(new IntentAction(this, PositionLogger.createIntent(this), R.drawable.home));
-        actionBar.addAction(new IntentAction(this, PositionLogger.createIntent(this), R.drawable.layers));
+        actionBar.addAction(new IntentAction(this, MapFrontendActivity.createIntent(this), R.drawable.layers));
     }
 
 	public void startListening(View v) {

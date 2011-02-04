@@ -17,7 +17,7 @@ public class PositionService extends Service {
 	public static final String listeningOnNetwork = "false";
 	private LocationManager locationManager;
 	private Location lastGoodLocation = null;
-	
+
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		start();
@@ -69,20 +69,28 @@ public class PositionService extends Service {
 		public void onLocationChanged(Location location) {
 			// Called when a new location is found by the network location
 			// provider.
-			
+
 			boolean isBetter = false;
-			
+
 			// Check if we got a last good location
 			if (lastGoodLocation == null) {
 				isBetter = true;
-			} else { 
-				// Check 
+			} else {
+				// Check
 				if (isBetterLocation(location, lastGoodLocation)) {
 					isBetter = true;
 				}
 			}
-			
+
 			if (isBetter) {
+				/*
+				 * location.toString() = Location[ mProvider=network,
+				 * mTime=1296831917582, mLatitude=59.22235755,
+				 * mLongitude=17.955837000000002, mHasAltitude=false,
+				 * mAltitude=0.0, mHasSpeed=false, mSpeed=0.0,
+				 * mHasBearing=false, mBearing=0.0, mHasAccuracy=true,
+				 * mAccuracy=55.0, mExtras=Bundle[mParcelledData.dataSize=148]]
+				 */
 				// The location is better
 				Log.i(TAG, "Got a better location - " + location.toString());
 			}

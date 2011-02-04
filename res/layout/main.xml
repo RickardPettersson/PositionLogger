@@ -12,10 +12,10 @@
 		android:layout_height="wrap_content" android:text="@string/title" />
 
 	<Button android:layout_width="fill_parent"
-		android:layout_height="fill_parent" android:layout_weight="1"
+		android:layout_height="wrap_content" android:layout_weight="1"
 		android:text="Start" android:onClick="startListening" />
 
 	<Button android:layout_width="fill_parent"
-		android:layout_height="fill_parent" android:layout_weight="1"
+		android:layout_height="wrap_content" android:layout_weight="1"
 		android:text="Stop" android:onClick="stopListening" />
 </LinearLayout>

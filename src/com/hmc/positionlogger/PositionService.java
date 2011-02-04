@@ -84,9 +84,8 @@ public class PositionService extends Service {
 			
 			if (isBetter) {
 				// The location is better
-				Log.i(TAG, "Got a better location");
+				Log.i(TAG, "Got a better location - " + location.toString());
 			}
-			Log.i(TAG, "Recieved position - " + location.toString());
 		}
 
 		public void onStatusChanged(String provider, int status, Bundle extras) {

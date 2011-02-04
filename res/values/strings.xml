@@ -2,4 +2,5 @@
 <resources>
     <string name="title">Position Logger</string>
     <string name="app_name">Position Logger</string>
+    <string name="logTag">PositionLogger</string>
 </resources>

@@ -22,26 +22,6 @@ public class PositionLogger extends Activity {
         actionBar.addAction(new IntentAction(this, PositionLogger.createIntent(this), R.drawable.layers));
     }
 
-    public void startListening(View v) {
-        Intent i=new Intent(this, PositionService.class);
-        
-        i.putExtra(PositionService.listeningOnGPS, "true");
-        i.putExtra(PositionService.listeningOnNetwork, "true");
-        
-        startService(i);
-      }
-      
-      public void stopListening(View v) {
-        stopService(new Intent(this, PositionService.class));
-      }
-
-	/** Called when the activity is first created. */
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-	}
-
 	public void startListening(View v) {
 		Log.w(getClass().getName(), "Start listening click");
 		

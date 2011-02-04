@@ -38,6 +38,7 @@ public class PositionLogger extends Activity {
 
 	public void stopListening(View v) {
 		Log.i(TAG, "Stop listening click");
+
 		stopService(new Intent(this, PositionService.class));
 	}
       

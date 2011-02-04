@@ -14,5 +14,5 @@
 		<service android:name="PositionService" />
     </application>
     <uses-sdk android:minSdkVersion="4" />
-
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest> 
